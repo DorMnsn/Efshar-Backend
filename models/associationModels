@@ -1,0 +1,153 @@
+const mongoose = require("mongoose");
+
+const associationSignupTemplate = new mongoose.Schema({
+  //Sign Up
+  userType: {
+    type: String,
+    required: false,
+  },
+  uid: {
+    type: String,
+    required: true,
+  },
+  firstName: {
+    type: String,
+    required: true,
+  },
+  lastName: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+  rememberMe: {
+    type: String,
+    required: false,
+  },
+  passInfo: {
+    type: String,
+    required: false,
+  },
+
+  //OB 1:
+  associationName: {
+    type: String,
+    required: false,
+  },
+  associationNum: {
+    type: Number,
+    required: false,
+  },
+  associationAdress: {
+    type: String,
+    required: false,
+  },
+  associationCity: {
+    type: String,
+    required: false,
+  },
+  associationPhone: {
+    type: Number,
+    required: false,
+  },
+  associationWebsite: {
+    type: String,
+    required: false,
+  },
+  associationLinkedin: {
+    type: String,
+    required: false,
+  },
+  associationFacebookPage: {
+    type: String,
+    required: false,
+  },
+
+  //OB2
+  ContactName: {
+    type: String,
+    required: false,
+  },
+  ContactJob: {
+    type: String,
+    required: false,
+  },
+  ContactMail: {
+    type: String,
+    required: false,
+  },
+  ContactPhone: {
+    type: String,
+    required: false,
+  },
+
+  //OB3
+  associationActivity: {
+    type: String,
+    required: false,
+  },
+  associationAbout: {
+    type: String,
+    required: false,
+  },
+  associationExperty: {
+    type: String,
+    required: false,
+  },
+
+  //OB4
+  applicationFormToVolunteerFullName: {
+    type: String,
+    required: false,
+  },
+  applicationFormToVolunteerMail: {
+    type: String,
+    required: false,
+  },
+
+  //OB5
+  targetPopulationPopulationType: {
+    type: String,
+    required: false,
+  },
+  targetPopulationActivityArea: {
+    type: String,
+    required: false,
+  },
+  targetPopulationAgeGroups: {
+    type: String,
+    required: false,
+  },
+  targetPopulationAssociationLinkedin: {
+    type: String,
+    required: false,
+  },
+  targetPopulationAssociationFacebookPage: {
+    type: String,
+    required: false,
+  },
+  profileImageLink: {
+    type: String,
+    required: false,
+  },
+  coverImageLink: {
+    type: String,
+    required: false,
+  },
+  myProfessionalContent: {
+    type: Array,
+    required: false,
+  },
+});
+
+module.exports = mongoose.model("Associations", associationSignupTemplate);

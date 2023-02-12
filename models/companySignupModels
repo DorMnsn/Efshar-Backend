@@ -1,0 +1,153 @@
+const mongoose = require("mongoose");
+
+const companySignupTemplate = new mongoose.Schema({
+  //Sign Up
+  userType: {
+    type: String,
+    required: false,
+  },
+  uid: {
+    type: String,
+    required: true,
+  },
+  firstName: {
+    type: String,
+    required: true,
+  },
+  lastName: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+  rememberMe: {
+    type: String,
+    required: false,
+  },
+  passInfo: {
+    type: String,
+    required: false,
+  },
+
+  //OB 1:
+  companyName: {
+    type: String,
+    required: false,
+  },
+  companyNum: {
+    type: Number,
+    required: false,
+  },
+  companyAdress: {
+    type: String,
+    required: false,
+  },
+  companyCity: {
+    type: String,
+    required: false,
+  },
+  companyOccupation: {
+    type: String,
+    required: false,
+  },
+  companyWebsite: {
+    type: String,
+    required: false,
+  },
+  companyNumOfWorkers: {
+    type: Number,
+    required: false,
+  },
+  companyLinkedin: {
+    type: String,
+    required: false,
+  },
+  companyFacebookPage: {
+    type: String,
+    required: false,
+  },
+
+  //OB2
+  ContactName: {
+    type: String,
+    required: false,
+  },
+  ContactJob: {
+    type: String,
+    required: false,
+  },
+  ContactMail: {
+    type: String,
+    required: false,
+  },
+  ContactPhone: {
+    type: String,
+    required: false,
+  },
+
+  //OB3
+  companyActivity: {
+    type: String,
+    required: false,
+  },
+  companyAbout: {
+    type: String,
+    required: false,
+  },
+  companyExperty: {
+    type: String,
+    required: false,
+  },
+
+  //OB4
+  benefitsForWorkers: {
+    type: String,
+    required: false,
+  },
+
+  //OB5
+  adjustmentsPossible: {
+    type: Array,
+    required: false,
+  },
+  additionalAdjustmentsPossible: {
+    type: String,
+    required: false,
+  },
+
+  //OB6
+  diversityPolicy: {
+    type: String,
+    required: false,
+  },
+
+  //others:
+  myJobs: {
+    type: Array,
+    required: false,
+  },
+  profileImageLink: {
+    type: String,
+    required: false,
+  },
+  coverImageLink: {
+    type: String,
+    required: false,
+  },
+  myProfessionalContent: {
+    type: Array,
+    required: false,
+  },
+});
+
+module.exports = mongoose.model("Companies", companySignupTemplate);

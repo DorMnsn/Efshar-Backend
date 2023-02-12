@@ -1,0 +1,300 @@
+const mongoose = require("mongoose");
+
+const signupTemplate = new mongoose.Schema({
+  //Sign Up
+  userType: {
+    type: String,
+    required: false,
+  },
+  uid: {
+    type: String,
+    required: true,
+  },
+  firstName: {
+    type: String,
+    required: true,
+  },
+  lastName: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+  rememberMe: {
+    type: String,
+    required: false,
+  },
+  passInfo: {
+    type: String,
+    required: false,
+  },
+  //OB 1:
+  OB1Name: {
+    type: String,
+    required: false,
+  },
+  OB1familyName: {
+    type: String,
+    required: false,
+  },
+  salaryExpectationRange: {
+    type: String,
+    required: false,
+  },
+  status: {
+    type: String,
+    required: false,
+  },
+  phone: {
+    type: String,
+    required: false,
+  },
+  OB1mail: {
+    type: String,
+    required: false,
+  },
+  isCheckedMelave: {
+    type: String,
+    required: false,
+  },
+  amuta: {
+    type: String,
+    required: false,
+  },
+  melaveFullName: {
+    type: String,
+    required: false,
+  },
+  melavePhone: {
+    type: String,
+    required: false,
+  },
+  melaveMail: {
+    type: String,
+    required: false,
+  },
+  currentJob: {
+    type: String,
+    required: false,
+  },
+
+  //OB 2:
+  aboutMe: {
+    type: String,
+    required: false,
+  },
+  //OB 3:
+  skills: {
+    type: Array,
+    required: false,
+  },
+  //OB 4:
+  previousJobs: {
+    type: Array,
+    required: false,
+  },
+  lastJob: {
+    type: String,
+    required: false,
+  },
+  lastJobCompanyName: {
+    type: String,
+    required: false,
+  },
+  lastJobStartMonth: {
+    type: String,
+    required: false,
+  },
+  lastJobStartYear: {
+    type: String,
+    required: false,
+  },
+  lastJobEndMonth: {
+    type: String,
+    required: false,
+  },
+  lastJobEndYear: {
+    type: String,
+    required: false,
+  },
+  isCheckedStillWorkingThere: {
+    type: String,
+    required: false,
+  },
+  lastJobDescreption: {
+    type: String,
+    required: false,
+  },
+  //OB 5:
+  previousEducation: {
+    type: Array,
+    required: false,
+  },
+
+  institutionName: {
+    type: String,
+    required: false,
+  },
+  diploma: {
+    type: String,
+    required: false,
+  },
+  fieldOfStudy: {
+    type: String,
+    required: false,
+  },
+  studyStartMonth: {
+    type: String,
+    required: false,
+  },
+  studyStartYear: {
+    type: String,
+    required: false,
+  },
+  studyEndMonth: {
+    type: String,
+    required: false,
+  },
+  studyEndYear: {
+    type: String,
+    required: false,
+  },
+  stillStudy: {
+    type: String,
+    required: false,
+  },
+  //OB 6:
+  wantedJob: {
+    type: String,
+    required: false,
+  },
+  location: {
+    type: String,
+    required: false,
+  },
+  constrains: {
+    type: String,
+    required: false,
+  },
+  wantedJobPrivacy: {
+    type: String,
+    required: false,
+  },
+  jobTypePrivacy: {
+    type: String,
+    required: false,
+  },
+  locationPrivacy: {
+    type: String,
+    required: false,
+  },
+  constrainsPrivacy: {
+    type: String,
+    required: false,
+  },
+  isWantedJobPublic: {
+    type: String,
+    required: false,
+  },
+  isjobTypePublic: {
+    type: String,
+    required: false,
+  },
+  isWantedJobModelPublic: {
+    type: String,
+    required: false,
+  },
+  isConstrainsPublic: {
+    type: String,
+    required: false,
+  },
+  far: {
+    type: Boolean,
+    required: false,
+  },
+  hybrid: {
+    type: Boolean,
+    required: false,
+  },
+  atWorkPlace: {
+    type: Boolean,
+    required: false,
+  },
+  fullTimeJob: {
+    type: Boolean,
+    required: false,
+  },
+  partTimeJob: {
+    type: Boolean,
+    required: false,
+  },
+  freelance: {
+    type: Boolean,
+    required: false,
+  },
+  shifts: {
+    type: Boolean,
+    required: false,
+  },
+
+  //OB 7:
+  languages: {
+    type: Array,
+    required: false,
+  },
+  //OB 8:
+  skillsKishurim: {
+    type: Array,
+    required: false,
+  },
+  //OB 9:
+  adjustments: {
+    type: Array,
+    required: false,
+  },
+  freeAdjustments: {
+    type: String,
+    required: false,
+  },
+  socialGroup: {
+    type: Array,
+    required: false,
+  },
+  socialGroupFreeText: {
+    type: String,
+    required: false,
+  },
+  moreServices: {
+    type: String,
+    required: false,
+  },
+  wantEscort: {
+    type: Boolean,
+    required: false,
+  },
+  wantTraining: {
+    type: Boolean,
+    required: false,
+  },
+
+  profileImageLink: {
+    type: String,
+    required: false,
+  },
+  coverImageLink: {
+    type: String,
+    required: false,
+  },
+});
+
+module.exports = mongoose.model("Candidates", signupTemplate);

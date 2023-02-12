@@ -1,0 +1,73 @@
+const mongoose = require("mongoose");
+
+const jobsTemplate = new mongoose.Schema({
+  companyUid: {
+    type: String,
+  },
+  jobId: {
+    type: Number,
+  },
+  companyName: {
+    type: String,
+  },
+  jobName: {
+    type: String,
+    required: true,
+  },
+  jobDescription: {
+    type: String,
+    required: true,
+  },
+  jobRequirements: {
+    type: String,
+    required: true,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+  location: {
+    type: String,
+    required: false,
+  },
+  salary: {
+    type: Number,
+    required: false,
+  },
+  currentJob: {
+    type: String,
+  },
+  jobType: {
+    type: String,
+    required: false,
+  },
+
+  far: {
+    type: Boolean,
+    required: false,
+  },
+  hybrid: {
+    type: Boolean,
+    required: false,
+  },
+  atWorkPlace: {
+    type: Boolean,
+    required: false,
+  },
+
+  adjustments: {
+    type: Array,
+    required: false,
+  },
+  MoreAdjustments: {
+    type: String,
+    required: false,
+  },
+
+  applied: {
+    type: Array,
+    required: false,
+  },
+});
+
+module.exports = mongoose.model("Jobs", jobsTemplate);

@@ -1,0 +1,142 @@
+const mongoose = require("mongoose");
+
+const serviceProviderTemplate = new mongoose.Schema({
+  //Sign Up
+  userType: {
+    type: String,
+    required: false,
+  },
+  uid: {
+    type: String,
+    required: true,
+  },
+  firstName: {
+    type: String,
+    required: true,
+  },
+  lastName: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+  rememberMe: {
+    type: String,
+    required: false,
+  },
+  passInfo: {
+    type: String,
+    required: false,
+  },
+
+  //OB 1:
+  providerName: {
+    type: String,
+    required: false,
+  },
+  providerNum: {
+    type: Number,
+    required: false,
+  },
+  providerAdress: {
+    type: String,
+    required: false,
+  },
+  providerCity: {
+    type: String,
+    required: false,
+  },
+  Phone: {
+    type: Number,
+    required: false,
+  },
+  providerWebsite: {
+    type: String,
+    required: false,
+  },
+  providerLinkedin: {
+    type: String,
+    required: false,
+  },
+  providerFacebookPage: {
+    type: String,
+    required: false,
+  },
+
+  //OB2
+  providerActivity: {
+    type: String,
+    required: false,
+  },
+  providerAbout: {
+    type: String,
+    required: false,
+  },
+  providerExperty: {
+    type: String,
+    required: false,
+  },
+
+  //OB3
+  serviceName: {
+    type: String,
+    required: false,
+  },
+  aboutTheServise: {
+    type: String,
+    required: false,
+  },
+  price: {
+    type: String,
+    required: false,
+  },
+
+  //OB4
+  populationType: {
+    type: String,
+    required: false,
+  },
+  locationOfActivity: {
+    type: String,
+    required: false,
+  },
+  ageGroup: {
+    type: String,
+    required: false,
+  },
+
+  TargetPopulationProviderLinkedin: {
+    type: String,
+    required: false,
+  },
+  TargetPopulationProviderFacebookPage: {
+    type: String,
+    required: false,
+  },
+
+  //Others
+  profileImageLink: {
+    type: String,
+    required: false,
+  },
+  coverImageLink: {
+    type: String,
+    required: false,
+  },
+  myProfessionalContent: {
+    type: Array,
+    required: false,
+  },
+});
+
+module.exports = mongoose.model("serviceProvider", serviceProviderTemplate);
