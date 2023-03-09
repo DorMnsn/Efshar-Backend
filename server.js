@@ -36,4 +36,4 @@ const upload = multer({
 app.use(express.json());
 app.use(cors());
 app.use("/app", routesUrls);
-app.listen(4000, () => console.log("server is up and running")); // nodejs app run on port 4000
+app.listen(8081, () => console.log("server is up and running")); // nodejs app run on port 8081
